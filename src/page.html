@@ -1,0 +1,830 @@
+<title>Perry T. Wolfe</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Perry T. Wolfe is a founder and operator across auto finance, data infrastructure, telehealth, insurance, freight, film and consumer brands. Founder and CEO of RunTorque, Needset AI and SXRX Health.">
+<meta name="author" content="Perry Wolfe">
+<meta name="theme-color" content="#0D1220">
+<link rel="canonical" href="https://perrytwolfe.com/">
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Perry T. Wolfe">
+<meta property="og:title" content="Perry T. Wolfe">
+<meta property="og:description" content="Founder and operator. RunTorque, Needset AI, SXRX Health, Self-Tape Studio, Insurance Capitol, Car Capitol and more.">
+<meta property="og:url" content="https://perrytwolfe.com/">
+<meta property="profile:first_name" content="Perry">
+<meta property="profile:last_name" content="Wolfe">
+<meta property="profile:username" content="theperrywolfe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Perry T. Wolfe">
+<meta name="twitter:description" content="Founder and operator across auto finance, data infrastructure, telehealth, insurance, freight and film.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230D1220'/%3E%3Cpath d='M12 18h9l5 22 6-22h0l6 22 5-22h9l-10 30h-9l-5-18-5 18h-9z' fill='%23F4B740'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://www.wolfeworldwide.com/#perry-wolfe",
+  "name": "Perry Wolfe",
+  "alternateName": ["Perry T. Wolfe", "theperrywolfe"],
+  "url": "https://perrytwolfe.com/",
+  "email": "mailto:perry@wolfeworldwide.com",
+  "telephone": "+1-915-820-1384",
+  "jobTitle": "Founder and CEO",
+  "worksFor": [
+    {"@type": "Organization", "name": "RunTorque", "legalName": "Torque.ai Inc", "url": "https://runtorque.ai"},
+    {"@type": "Organization", "name": "Needset AI", "legalName": "Needset AI Inc", "url": "https://needset.ai"},
+    {"@type": "MedicalOrganization", "name": "SXRX Health", "legalName": "SxRx PLLC", "url": "https://sxrx.us"},
+    {"@type": "Organization", "name": "Wolfe Worldwide", "url": "https://www.wolfeworldwide.com"}
+  ],
+  "homeLocation": {"@type": "Place", "name": "El Paso, Texas"},
+  "workLocation": {"@type": "Place", "name": "Los Angeles, California"},
+  "sameAs": [
+    "https://www.instagram.com/theperrywolfe/",
+    "https://www.linkedin.com/in/perry-wolfe-193a10171/"
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: a departures board. Name and a split-flap sector line open the page; companies and projects read as board rows; connect is a boarding pass. */
+:root {
+  --bg: #0D1220;
+  --surface: #141B2D;
+  --surface-2: #1A2238;
+  --line: #262F47;
+  --fg: #E8EBF2;
+  --muted: #8B95AC;
+  --accent: #F4B740;
+  --ok: #5FD39A;
+  --flap: #070A13;
+  --flap-edge: #1C2438;
+  --flap-fg: #F4B740;
+  --btn-bg: #F4B740;
+  --btn-fg: #1A1405;
+  --display: "Big Shoulders Display", "Arial Narrow", "Roboto Condensed", Impact, sans-serif;
+  --body: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: #ECEEF3; --surface: #FFFFFF; --surface-2: #F5F6F9; --line: #D3D8E3;
+    --fg: #0F1629; --muted: #555F79; --accent: #8F5C00; --ok: #11744A;
+    --flap: #0E1424; --flap-edge: #222B42; --flap-fg: #F4B740;
+    color-scheme: light;
+  }
+}
+:root[data-theme="light"] {
+  --bg: #ECEEF3; --surface: #FFFFFF; --surface-2: #F5F6F9; --line: #D3D8E3;
+  --fg: #0F1629; --muted: #555F79; --accent: #8F5C00; --ok: #11744A;
+  --flap: #0E1424; --flap-edge: #222B42; --flap-fg: #F4B740;
+  color-scheme: light;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 400 17px/1.6 var(--body);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+body::before {
+  content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px);
+  z-index: 30; background: var(--bg);
+}
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+.wrap {
+  max-width: 1180px; margin: 0 auto;
+  padding-left: max(20px, env(safe-area-inset-left, 0px));
+  padding-right: max(20px, env(safe-area-inset-right, 0px));
+}
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.label {
+  font: 600 12px/1.2 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--muted);
+}
+
+/* Header */
+.top {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.top-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 14px; }
+.mark { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.mark-glyph {
+  display: grid; place-items: center; width: 34px; height: 34px; border-radius: 8px;
+  background: var(--flap); color: var(--flap-fg); font: 800 17px/1 var(--display); letter-spacing: .02em;
+}
+.mark-text { font: 600 13px/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; }
+.nav { display: flex; align-items: center; gap: 22px; }
+.nav a { text-decoration: none; font: 500 15px/1 var(--body); color: var(--muted); }
+.nav a:hover { color: var(--fg); }
+.nav .btn { color: var(--btn-fg); }
+@media (max-width: 720px) { .nav a.nav-link { display: none; } }
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; gap: 10px; min-height: 46px; padding: 0 20px;
+  border-radius: 999px; border: 1px solid transparent; cursor: pointer;
+  font: 600 15px/1 var(--body); text-decoration: none; white-space: nowrap;
+  background: var(--btn-bg); color: var(--btn-fg);
+  transition: transform .15s ease, background-color .15s ease, border-color .15s ease;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn-ghost { background: transparent; color: var(--fg); border-color: var(--line); }
+.btn-ghost:hover { border-color: var(--muted); }
+.btn-sm { min-height: 38px; padding: 0 16px; font-size: 14px; }
+.btn svg { width: 16px; height: 16px; flex: none; }
+
+/* Hero */
+.hero { padding-block: clamp(44px, 8vw, 96px) clamp(36px, 6vw, 64px); }
+.eyebrow { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 0 0 18px; }
+.eyebrow .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--ok); box-shadow: 0 0 0 4px color-mix(in srgb, var(--ok) 22%, transparent); }
+.name {
+  margin: 0; font-family: var(--display); font-weight: 900; text-transform: uppercase;
+  font-size: clamp(76px, 17vw, 228px); line-height: .84; letter-spacing: -.01em;
+}
+.name span { display: block; }
+.name .initial { color: var(--accent); }
+.hero-row { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 64px); align-items: end; margin-top: clamp(28px, 4vw, 44px); }
+@media (max-width: 880px) { .hero-row { grid-template-columns: 1fr; } }
+.lede { margin: 0 0 26px; max-width: 34ch; font-size: clamp(19px, 2.1vw, 23px); line-height: 1.45; text-wrap: balance; }
+.lede strong { font-weight: 600; }
+.cta-row { display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* Split-flap board */
+.board-wrap { min-width: 0; }
+.board-head { display: flex; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
+.board {
+  --cell: clamp(22px, 3.3vw, 36px);
+  display: flex; gap: 3px; padding: 10px; width: max-content; max-width: 100%;
+  background: var(--flap); border-radius: 10px; border: 1px solid var(--flap-edge);
+}
+.cell {
+  position: relative; display: grid; place-items: center;
+  width: var(--cell); height: calc(var(--cell) * 1.42);
+  background: linear-gradient(#141A2B 0 49%, #0B101C 51% 100%);
+  border-radius: 4px; color: var(--flap-fg);
+  font: 600 calc(var(--cell) * .82)/1 var(--mono); text-transform: uppercase;
+}
+.cell::after { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 1px; background: #000; opacity: .7; }
+.cell.tick { animation: flap .07s linear; }
+@keyframes flap { 0% { transform: scaleY(1); } 50% { transform: scaleY(.6); } 100% { transform: scaleY(1); } }
+.board-foot { display: flex; align-items: baseline; gap: 10px; margin-top: 12px; font: 400 14px/1.4 var(--mono); color: var(--muted); }
+.board-foot a { color: var(--fg); text-decoration-color: var(--accent); text-underline-offset: 4px; }
+
+/* Ledger */
+.ledger {
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  margin-top: clamp(40px, 6vw, 72px);
+}
+.ledger div { padding-block: 18px; padding-right: 16px; min-width: 0; }
+.ledger div + div { border-left: 1px solid var(--line); padding-left: 18px; }
+.ledger dt { margin: 0 0 6px; }
+.ledger dd { margin: 0; font: 800 clamp(26px, 3.4vw, 38px)/1 var(--display); text-transform: uppercase; font-variant-numeric: tabular-nums; }
+@media (max-width: 720px) {
+  .ledger { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ledger div:nth-child(3) { border-left: 0; padding-left: 0; }
+  .ledger div:nth-child(n+3) { border-top: 1px solid var(--line); }
+}
+
+/* Sections */
+section.block { padding-block: clamp(56px, 8vw, 104px); }
+.sec-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 16px 32px; margin-bottom: 28px; }
+.sec-head h2 { margin: 6px 0 0; font: 900 clamp(46px, 7vw, 86px)/.9 var(--display); text-transform: uppercase; }
+.sec-head p { margin: 0; max-width: 46ch; color: var(--muted); }
+
+/* Board rows */
+.rows { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.cols, .row {
+  display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 2fr) minmax(0, .95fr) 132px;
+  gap: 24px; align-items: start;
+}
+.cols { padding-block: 12px; border-bottom: 1px solid var(--line); }
+.row {
+  padding-block: 22px; padding-inline: 12px; margin-inline: -12px; border-radius: 10px;
+  border-bottom: 1px solid var(--line); border-bottom-left-radius: 0; border-bottom-right-radius: 0;
+  transition: background-color .15s ease; scroll-margin-top: 90px;
+}
+.row:hover, .row.is-current { background: var(--surface-2); }
+.row h3 { margin: 4px 0 0; font: 800 clamp(26px, 2.6vw, 32px)/1 var(--display); text-transform: uppercase; letter-spacing: .01em; }
+.row .site { display: inline-block; margin-top: 8px; font: 400 13px/1.3 var(--mono); color: var(--muted); text-decoration: none; }
+.row .site:hover { color: var(--accent); }
+.row p { margin: 0; min-width: 0; }
+.row .what { color: var(--fg); }
+.row .role { font: 600 14px/1.45 var(--body); color: var(--muted); }
+.status {
+  justify-self: end; display: inline-flex; align-items: center; gap: 7px; padding: 6px 10px; border-radius: 6px;
+  font: 600 11px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; white-space: nowrap;
+  border: 1px solid var(--line); color: var(--muted);
+}
+.status::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+.status.live { color: var(--ok); border-color: color-mix(in srgb, var(--ok) 40%, transparent); }
+.status.gold { color: var(--accent); border-color: color-mix(in srgb, var(--accent) 45%, transparent); }
+@media (max-width: 860px) {
+  .cols { display: none; }
+  .row { grid-template-columns: minmax(0, 1fr) auto; gap: 10px 16px; }
+  .row .co { grid-column: 1; grid-row: 1; }
+  .row .status { grid-column: 2; grid-row: 1; }
+  .row .what, .row .role { grid-column: 1 / -1; }
+}
+
+/* Slate */
+.slate { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 28px; }
+@media (max-width: 860px) { .slate { grid-template-columns: 1fr; } }
+.slate article { padding: 22px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); min-width: 0; }
+.slate h4 { margin: 10px 0 8px; font: 800 26px/1 var(--display); text-transform: uppercase; }
+.slate p { margin: 0; color: var(--muted); font-size: 15px; }
+
+/* Timeline */
+.timeline { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+.timeline li { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 24px; padding-block: 18px; border-top: 1px solid var(--line); }
+.timeline li:last-child { border-bottom: 1px solid var(--line); }
+.timeline time { font: 800 26px/1.1 var(--display); text-transform: uppercase; color: var(--accent); font-variant-numeric: tabular-nums; }
+.timeline p { margin: 0; max-width: 62ch; }
+.timeline b { font-weight: 600; }
+@media (max-width: 600px) { .timeline li { grid-template-columns: 1fr; gap: 4px; } }
+
+/* Licenses */
+.lic { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.lic li { display: grid; gap: 6px; padding: 20px; background: var(--bg); min-width: 0; }
+.lic b { font: 600 16px/1.3 var(--body); }
+.lic code { font: 600 22px/1.1 var(--mono); color: var(--accent); font-variant-numeric: tabular-nums; }
+.lic small { color: var(--muted); font-size: 13px; }
+@media (max-width: 860px) { .lic { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .lic { grid-template-columns: 1fr; } }
+.row .site.tel { display: block; margin-top: 4px; }
+
+/* Connect */
+.connect-grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 24px; align-items: start; }
+@media (max-width: 900px) { .connect-grid { grid-template-columns: 1fr; } }
+.pass { border-radius: 16px; background: var(--flap); color: #E8EBF2; overflow: hidden; border: 1px solid var(--flap-edge); }
+.pass-top { display: flex; justify-content: space-between; gap: 12px; padding: 20px 22px; border-bottom: 2px dashed #273049; }
+.pass-top .label { color: #8B95AC; }
+.pass-body { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 20px; padding: 22px; align-items: center; }
+@media (max-width: 460px) { .pass-body { grid-template-columns: 1fr; } }
+.pass h3 { margin: 4px 0 6px; font: 900 44px/.9 var(--display); text-transform: uppercase; color: #FFFFFF; }
+.pass .pass-role { margin: 0 0 16px; color: #A9B2C6; font-size: 15px; }
+.pass dl { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 6px 14px; margin: 0; font: 400 13px/1.4 var(--mono); }
+.pass dt { color: #8B95AC; text-transform: uppercase; letter-spacing: .1em; }
+.pass dd { margin: 0; color: #E8EBF2; overflow-wrap: anywhere; }
+.qr { width: 148px; height: 148px; padding: 10px; background: #FFFFFF; border-radius: 10px; justify-self: start; }
+.qr svg { display: block; width: 100%; height: 100%; }
+.pass-actions { display: flex; flex-wrap: wrap; gap: 10px; padding: 0 22px 22px; }
+.pass .btn-ghost { color: #E8EBF2; border-color: #2E3852; }
+
+.links { list-style: none; margin: 0 0 20px; padding: 0; border-top: 1px solid var(--line); }
+.links a, .links .link-row {
+  display: grid; grid-template-columns: 120px minmax(0, 1fr) auto; gap: 16px; align-items: center;
+  padding-block: 18px; border-bottom: 1px solid var(--line); text-decoration: none;
+}
+.links .handle { font: 800 clamp(24px, 3vw, 32px)/1 var(--display); text-transform: uppercase; overflow-wrap: anywhere; min-width: 0; }
+.links .arrow { font: 400 20px/1 var(--mono); color: var(--muted); transition: transform .15s ease, color .15s ease; }
+.links a:hover .arrow { transform: translate(3px, -3px); color: var(--accent); }
+.links a:hover .handle { color: var(--accent); }
+.copy-btn { background: none; border: 1px solid var(--line); color: var(--fg); border-radius: 999px; padding: 8px 14px; font: 600 13px/1 var(--body); cursor: pointer; }
+.copy-btn:hover { border-color: var(--muted); }
+@media (max-width: 520px) {
+  .links a, .links .link-row { grid-template-columns: minmax(0, 1fr) auto; }
+  .links .label { grid-column: 1 / -1; }
+}
+
+.updates { padding: 24px; border-radius: 16px; background: var(--surface); border: 1px solid var(--line); }
+.updates h3 { margin: 0 0 6px; font: 800 32px/1 var(--display); text-transform: uppercase; }
+.updates > p { margin: 0 0 18px; color: var(--muted); font-size: 15px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 16px; padding: 0; border: 0; }
+.chips legend { margin-bottom: 10px; padding: 0; }
+.chip input { position: absolute; opacity: 0; pointer-events: none; }
+.chip span {
+  display: inline-block; padding: 8px 13px; border-radius: 999px; border: 1px solid var(--line);
+  font: 500 14px/1 var(--body); cursor: pointer; user-select: none; transition: background-color .15s ease, border-color .15s ease;
+}
+.chip input:checked + span { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+.chip input:focus-visible + span { outline: 2px solid var(--accent); outline-offset: 2px; }
+.field { display: flex; flex-wrap: wrap; gap: 10px; }
+.field input {
+  flex: 1 1 220px; min-width: 0; min-height: 48px; padding: 0 16px; border-radius: 999px;
+  border: 1px solid var(--line); background: var(--bg); color: var(--fg); font: 400 16px/1 var(--body);
+}
+.field input::placeholder { color: var(--muted); }
+.field input:focus { outline: none; border-color: var(--accent); }
+.form-note { min-height: 1.5em; margin: 12px 0 0; font-size: 14px; color: var(--muted); }
+.form-note.ok { color: var(--ok); }
+.form-note.err { color: var(--accent); }
+.hp { position: absolute; left: -9999px; }
+
+/* Footer */
+footer { padding-block: 36px 48px; border-top: 1px solid var(--line); }
+.foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; font: 400 13px/1.5 var(--mono); color: var(--muted); }
+.foot a { color: var(--muted); }
+.foot a:hover { color: var(--fg); }
+.trec { flex: 1 1 100%; order: 3; max-width: 80ch; }
+
+@media (prefers-reduced-motion: reduce) {
+  .cell.tick { animation: none; }
+  .btn, .links .arrow { transition: none; }
+}
+</style>
+
+<header class="top">
+  <div class="wrap top-inner">
+    <a class="mark" href="#top" aria-label="Perry T. Wolfe, back to top">
+      <span class="mark-glyph" aria-hidden="true">PW</span>
+      <span class="mark-text">Perry T. Wolfe</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a class="nav-link" href="#companies">Companies</a>
+      <a class="nav-link" href="#projects">Projects</a>
+      <a class="nav-link" href="#milestones">Milestones</a>
+      <a class="nav-link" href="#licenses">Licenses</a>
+      <a class="btn btn-sm" href="#connect">Add me</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow label"><span class="dot" aria-hidden="true"></span>Building now <span aria-hidden="true">/</span> El Paso <span aria-hidden="true">/</span> Los Angeles</p>
+      <h1 class="name"><span>Perry <span class="initial">T.</span></span><span>Wolfe</span></h1>
+
+      <div class="hero-row">
+        <div>
+          <p class="lede"><strong>Founder, operator and consultant.</strong> <span data-years>14</span> years building companies that move cars, freight, money, care and stories.</p>
+          <div class="cta-row">
+            <a class="btn" href="#connect">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="9" cy="8" r="4"/><path d="M2 21c0-4 3-6 7-6s7 2 7 6M19 8v6M16 11h6"/></svg>
+              Add me
+            </a>
+            <a class="btn btn-ghost" href="#updates">Get updates</a>
+          </div>
+        </div>
+
+        <div class="board-wrap">
+          <div class="board-head"><span class="label">Now operating in</span><span class="label" id="boardCount">01 / 11</span></div>
+          <div class="board" id="board" role="img" aria-label="Now operating in auto finance, through RunTorque"></div>
+          <p class="board-foot"><span aria-hidden="true">&rarr;</span><a id="boardLink" href="#v-runtorque">RunTorque</a></p>
+        </div>
+      </div>
+
+      <dl class="ledger">
+        <div><dt class="label">Operating since</dt><dd>2012</dd></div>
+        <div><dt class="label">Companies</dt><dd>9</dd></div>
+        <div><dt class="label">Insurance licensed</dt><dd>TX &middot; CA &middot; NM</dd></div>
+        <div><dt class="label">Industries</dt><dd>10+</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="block" id="companies" aria-labelledby="companies-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="label">Departures</span><h2 id="companies-title">Companies</h2></div>
+        <p>Businesses I founded or run. Each one is a different industry, and each one is operating today.</p>
+      </div>
+
+      <div class="cols label" aria-hidden="true"><span>Company</span><span>What it does</span><span>Role</span><span style="justify-self:end">Status</span></div>
+      <ul class="rows">
+        <li class="row" id="v-runtorque">
+          <div class="co"><span class="label">Auto finance</span><h3>RunTorque</h3><a class="site" href="https://runtorque.ai" target="_blank" rel="noopener">runtorque.ai &nearr;</a><a class="site tel" href="tel:+13239099757">(323) 909-9757</a></div>
+          <p class="what">A financing network that connects auto dealers to credit unions and lenders. Soft-pull pre-approval before the customer picks a car, underwriting built in, and insurance quoted and bound at the desk.</p>
+          <p class="role">Founder &amp; CEO<br>Torque.ai Inc</p>
+          <span class="status live">Live</span>
+        </li>
+        <li class="row" id="v-needset">
+          <div class="co"><span class="label">Data infrastructure</span><h3>Needset AI</h3><a class="site" href="https://needset.ai" target="_blank" rel="noopener">needset.ai &nearr;</a></div>
+          <p class="what">The data-execution control plane for teams training and running models. It turns what a model actually needs into a budgeted working set, so companies stop storing and moving data they never use.</p>
+          <p class="role">Founder &amp; CEO<br>Needset AI Inc</p>
+          <span class="status live">Live</span>
+        </li>
+        <li class="row" id="v-sxrx">
+          <div class="co"><span class="label">Telehealth</span><h3>SXRX Health</h3><a class="site" href="https://sxrx.us" target="_blank" rel="noopener">sxrx.us &nearr;</a><a class="site tel" href="tel:+18556715365">(855) 671-5365</a></div>
+          <p class="what">A physician-led telehealth practice serving California, with online intake, licensed pharmacy fulfillment and a patient portal. LegitScript healthcare certified.</p>
+          <p class="role">Founder &amp; CEO<br>SxRx PLLC</p>
+          <span class="status gold">Certified</span>
+        </li>
+        <li class="row" id="v-selftape">
+          <div class="co"><span class="label">Casting</span><h3>Self-Tape Studio</h3><a class="site" href="https://selftapestudio.ai" target="_blank" rel="noopener">selftapestudio.ai &nearr;</a></div>
+          <p class="what">An audition studio for actors. A live scene partner reads the other roles on cue, then the actor records, trims and slates a finished self-tape. Part of Casting Exchange.</p>
+          <p class="role">Co-founder</p>
+          <span class="status live">Live</span>
+        </li>
+        <li class="row" id="v-insurance">
+          <div class="co"><span class="label">Insurance</span><h3>Insurance Capitol</h3><a class="site" href="https://theinsurancecapitol.com" target="_blank" rel="noopener">theinsurancecapitol.com &nearr;</a></div>
+          <p class="what">An independent property and casualty agency licensed in Texas, California and New Mexico, appointed with Progressive, Travelers and The General. Agency of record for the RunTorque network.</p>
+          <p class="role">Agency principal<br>TX agency lic. 3216657</p>
+          <span class="status gold">Licensed</span>
+        </li>
+        <li class="row" id="v-carcapitol">
+          <div class="co"><span class="label">Automotive</span><h3>Car Capitol</h3><a class="site tel" href="tel:+18006515726">(800) 651-5726</a></div>
+          <p class="what">An independent dealership in El Paso, Texas, selling and financing vehicles since June 2012. Where the rest of this started.</p>
+          <p class="role">Dealer principal<br>Mesa Motors LLC<br>TX dealer P118052</p>
+          <span class="status">Since 2012</span>
+        </li>
+        <li class="row" id="v-wolfe">
+          <div class="co"><span class="label">Freight</span><h3>Wolfe Worldwide</h3><a class="site" href="https://www.wolfeworldwide.com" target="_blank" rel="noopener">wolfeworldwide.com &nearr;</a></div>
+          <p class="what">Freight brokerage and the holding company behind the rest. Regular lanes between the Port of Los Angeles area and the El Paso and Ju&aacute;rez border.</p>
+          <p class="role">Founder</p>
+          <span class="status live">Active</span>
+        </li>
+        <li class="row" id="v-productions">
+          <div class="co"><span class="label">Film &amp; TV</span><h3>Wolfe Worldwide Productions</h3><a class="site" href="https://www.wolfeworldwideproductions.com" target="_blank" rel="noopener">wolfeworldwideproductions.com &nearr;</a></div>
+          <p class="what">Film and television production and development, with a slate of originals and a reference series. Current development slate below.</p>
+          <p class="role">Founder &amp; producer</p>
+          <span class="status live">Active</span>
+        </li>
+        <li class="row" id="v-realestate">
+          <div class="co"><span class="label">Real estate</span><h3>Home Pros Real Estate</h3></div>
+          <p class="what">Residential and commercial real estate in El Paso, from home sales to commercial listings and investor packages.</p>
+          <p class="role">Texas sales agent #836988<br>Broker: Home Pros Real Estate Group</p>
+          <span class="status gold">Licensed</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block" id="projects" aria-labelledby="projects-title" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="label">Arrivals</span><h2 id="projects-title">Projects</h2></div>
+        <p>Brands and productions I have built, consulted on or developed with partners.</p>
+      </div>
+
+      <ul class="rows">
+        <li class="row" id="v-pure">
+          <div class="co"><span class="label">Beverage</span><h3>PURE Energy</h3></div>
+          <p class="what">PURE Functional Beverage Co., the company behind Pure Energy, Perry's Protein and Pure Pop. Zero-sugar energy built in Los Angeles and growing first in Mexico.</p>
+          <p class="role">Consultant</p>
+          <span class="status live">In market</span>
+        </li>
+        <li class="row" id="v-vp">
+          <div class="co"><span class="label">Beauty</span><h3>V/P Cosm&eacute;tique</h3></div>
+          <p class="what">The professional haircare and styling tool line from celebrity hairstylist Vincent Pelletier. Product development, manufacturing specification and brand buildout for the six-piece Signature Kit.</p>
+          <p class="role">Product development &amp; brand</p>
+          <span class="status gold">In production</span>
+        </li>
+        <li class="row" id="v-mog">
+          <div class="co"><span class="label">Grooming</span><h3>mog</h3></div>
+          <p class="what">Premium cosmetics for men, made in Los Angeles. Not makeup. An advantage. A three-piece kit for lip, brow and skin, all vegan and cruelty-free.</p>
+          <p class="role">Co-founder</p>
+          <span class="status">In development</span>
+        </li>
+      </ul>
+
+      <div class="slate" aria-label="Development slate">
+        <article>
+          <span class="label">Feature &middot; Psychological horror</span>
+          <h4>Keep Me</h4>
+          <p>A contained horror feature set almost entirely inside one Hollywood high-rise apartment.</p>
+        </article>
+        <article>
+          <span class="label">Series &middot; Drama</span>
+          <h4>Polvo y Oro</h4>
+          <p>Dust and Gold. A family drama on the El Paso and Ju&aacute;rez border, told in vertical episodes.</p>
+        </article>
+        <article>
+          <span class="label">Studio</span>
+          <h4>Wolfe Worldwide Originals</h4>
+          <p>Original film and series development from Wolfe Worldwide Productions.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="milestones" aria-labelledby="milestones-title" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="label">The log</span><h2 id="milestones-title">Milestones</h2></div>
+      </div>
+      <ol class="timeline">
+        <li><time datetime="2012-06">Jun 2012</time><p><b>Opened Car Capitol in El Paso.</b> Buying, selling and financing cars, and learning every side of a deal.</p></li>
+        <li><time datetime="2023">2023</time><p><b>Licensed as an insurance producer.</b> Independent from day one, never captive. Built Insurance Capitol, now licensed in Texas, California and New Mexico.</p></li>
+        <li><time datetime="2026-05">May 2026</time><p><b>Incorporated Torque.ai to launch RunTorque,</b> a financing network built from fourteen years on the dealer side of the desk.</p></li>
+        <li><time datetime="2026-09">Sep 2026</time><p><b>SXRX Health earned LegitScript healthcare certification</b> after a full review of the platform, its physicians and its pharmacy.</p></li>
+        <li><time datetime="2026-09">Sep 2026</time><p><b>Opened Self-Tape Studio to actors</b> and began partnering with acting schools, coaches and casting platforms.</p></li>
+        <li><time datetime="2026-10">Oct 2026</time><p><b>Needset AI went live,</b> with self-serve onboarding and billing for data teams of every size.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="block" id="licenses" aria-labelledby="licenses-title" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="label">Credentials</span><h2 id="licenses-title">Licenses</h2></div>
+        <p>Every license is active and can be checked with the issuing state.</p>
+      </div>
+      <ul class="lic">
+        <li><span class="label">Texas DMV</span><b>Motor vehicle dealer</b><code>P118052</code><small>Mesa Motors LLC d/b/a Car Capitol</small></li>
+        <li><span class="label">Texas TDI</span><b>General lines agent, P&amp;C</b><code>3186385</code><small>Individual producer</small></li>
+        <li><span class="label">Texas TDI</span><b>General lines agency, P&amp;C</b><code>3216657</code><small>Insurance Capitol</small></li>
+        <li><span class="label">California CDI</span><b>Property &amp; casualty producer</b><code>4442693</code><small>Individual producer</small></li>
+        <li><span class="label">New Mexico OSI</span><b>Insurance producer</b><code>21216112</code><small>Individual producer</small></li>
+        <li><span class="label">Texas TREC</span><b>Real estate sales agent</b><code>836988</code><small>Home Pros Real Estate Group</small></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block" id="connect" aria-labelledby="connect-title" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="label">Boarding</span><h2 id="connect-title">Add me</h2></div>
+        <p>Save my contact, follow along, or get a note when something new launches.</p>
+      </div>
+
+      <div class="connect-grid">
+        <div class="pass" aria-labelledby="pass-name">
+          <div class="pass-top"><span class="label">Contact card</span><span class="label">PTW &middot; 2026</span></div>
+          <div class="pass-body">
+            <div>
+              <span class="label">Passenger</span>
+              <h3 id="pass-name">Perry T. Wolfe</h3>
+              <p class="pass-role">Founder &amp; CEO, RunTorque &middot; Needset AI &middot; SXRX Health</p>
+              <dl>
+                <dt>Mobile</dt><dd>(915) 820-1384</dd>
+                <dt>Email</dt><dd>perry@wolfeworldwide.com</dd>
+                <dt>Web</dt><dd>perrytwolfe.com</dd>
+                <dt>Base</dt><dd>El Paso / Los Angeles</dd>
+              </dl>
+            </div>
+            <div class="qr" id="qr" role="img" aria-label="QR code that saves Perry T. Wolfe's contact card"></div>
+          </div>
+          <div class="pass-actions">
+            <a class="btn btn-sm" href="/perry-wolfe.vcf" download="Perry-Wolfe.vcf">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>
+              Save contact
+            </a>
+            <button class="btn btn-sm btn-ghost" type="button" data-copy="perry@wolfeworldwide.com">Copy email</button>
+          </div>
+        </div>
+
+        <div>
+          <ul class="links">
+            <li><a href="https://www.instagram.com/theperrywolfe/" target="_blank" rel="noopener me"><span class="label">Instagram</span><span class="handle">@theperrywolfe</span><span class="arrow" aria-hidden="true">&nearr;</span></a></li>
+            <li><a href="https://www.linkedin.com/in/perry-wolfe-193a10171/" target="_blank" rel="noopener me"><span class="label">LinkedIn</span><span class="handle">Perry T. Wolfe</span><span class="arrow" aria-hidden="true">&nearr;</span></a></li>
+            <li><a href="tel:+19158201384"><span class="label">Mobile</span><span class="handle" style="font-family:var(--mono);font-weight:400;font-size:clamp(16px,2vw,20px)">(915) 820-1384</span><span class="arrow" aria-hidden="true">&nearr;</span></a></li>
+            <li><div class="link-row"><span class="label">Email</span><span class="handle" style="text-transform:none;font-family:var(--mono);font-weight:400;font-size:clamp(16px,2vw,20px)">perry@wolfeworldwide.com</span><button class="copy-btn" type="button" data-copy="perry@wolfeworldwide.com">Copy</button></div></li>
+          </ul>
+
+          <form class="updates" id="updates" name="updates" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="company" novalidate>
+            <input type="hidden" name="form-name" value="updates">
+            <input type="hidden" name="topics" id="topics" value="Everything">
+            <p class="hp"><label for="company">Leave this empty</label><input id="company" name="company" tabindex="-1" autocomplete="off"></p>
+            <h3>Get updates</h3>
+            <p>A short note when I launch a company, ship something big or change roles. A few emails a year. Your address is never shared.</p>
+            <fieldset class="chips">
+              <legend class="label">Tell me about</legend>
+              <label class="chip"><input type="checkbox" id="t-all" value="Everything" checked><span>Everything</span></label>
+              <label class="chip"><input type="checkbox" id="t-auto" value="Auto finance"><span>Auto finance</span></label>
+              <label class="chip"><input type="checkbox" id="t-data" value="AI and data"><span>AI &amp; data</span></label>
+              <label class="chip"><input type="checkbox" id="t-health" value="Health"><span>Health</span></label>
+              <label class="chip"><input type="checkbox" id="t-film" value="Film and TV"><span>Film &amp; TV</span></label>
+              <label class="chip"><input type="checkbox" id="t-brands" value="Consumer brands"><span>Brands</span></label>
+            </fieldset>
+            <div class="field">
+              <label class="sr-only" for="email">Email address</label>
+              <input id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@company.com" required>
+              <button class="btn" type="submit" id="notifyBtn">Notify me</button>
+            </div>
+            <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>&copy; <span data-year>2026</span> Perry T. Wolfe &middot; perrytwolfe.com</span>
+    <span class="trec">Texas law requires real estate license holders to give the following information: <a href="https://dtzulyujzhqiu.cloudfront.net/homeprosrealestategroup12019/compliance/tx/company/12019_965858_iabs.pdf" target="_blank" rel="noopener">Information About Brokerage Services</a> &middot; <a href="https://www.trec.texas.gov/sites/default/files/pdf-forms/CN%201-5.pdf" target="_blank" rel="noopener">TREC Consumer Protection Notice</a></span>
+    <a href="#top">Back to top &uarr;</a>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+<script>
+(function () {
+  "use strict";
+
+  var CONTACT = {
+    first: "Perry", middle: "T.", last: "Wolfe",
+    title: "Founder & CEO",
+    org: "Wolfe Worldwide",
+    email: "perry@wolfeworldwide.com",
+    phone: "+1-915-820-1384",
+    url: "https://perrytwolfe.com",
+    instagram: "https://www.instagram.com/theperrywolfe/",
+    linkedin: "https://www.linkedin.com/in/perry-wolfe-193a10171/"
+  };
+
+  var SECTORS = [
+    { word: "Auto finance", target: "v-runtorque", name: "RunTorque" },
+    { word: "AI data", target: "v-needset", name: "Needset AI" },
+    { word: "Telehealth", target: "v-sxrx", name: "SXRX Health" },
+    { word: "Casting", target: "v-selftape", name: "Self-Tape Studio" },
+    { word: "Insurance", target: "v-insurance", name: "Insurance Capitol" },
+    { word: "Automotive", target: "v-carcapitol", name: "Car Capitol" },
+    { word: "Freight", target: "v-wolfe", name: "Wolfe Worldwide" },
+    { word: "Film + TV", target: "v-productions", name: "Wolfe Worldwide Productions" },
+    { word: "Beverage", target: "v-pure", name: "PURE Energy" },
+    { word: "Beauty", target: "v-vp", name: "V/P Cosmétique" },
+    { word: "Real estate", target: "v-realestate", name: "Home Pros Real Estate" }
+  ];
+
+  var now = new Date();
+  document.querySelectorAll("[data-year]").forEach(function (el) { el.textContent = String(now.getFullYear()); });
+  document.querySelectorAll("[data-years]").forEach(function (el) { el.textContent = String(now.getFullYear() - 2012); });
+
+  /* Split-flap board */
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var board = document.getElementById("board");
+  var boardLink = document.getElementById("boardLink");
+  var boardCount = document.getElementById("boardCount");
+  var WIDTH = SECTORS.reduce(function (max, s) { return Math.max(max, s.word.length); }, 0);
+  var GLYPHS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ+";
+  var cells = [];
+  for (var i = 0; i < WIDTH; i++) {
+    var c = document.createElement("span");
+    c.className = "cell";
+    c.setAttribute("aria-hidden", "true");
+    board.appendChild(c);
+    cells.push(c);
+  }
+  function pad(word) {
+    var w = word.toUpperCase();
+    while (w.length < WIDTH) w += " ";
+    return w;
+  }
+  function two(n) { return n < 10 ? "0" + n : String(n); }
+
+  var index = 0;
+  var timers = [];
+  function clearTimers() { timers.forEach(clearTimeout); timers = []; }
+
+  function setCaption(s) {
+    boardLink.textContent = s.name;
+    boardLink.setAttribute("href", "#" + s.target);
+    boardCount.textContent = two(index + 1) + " / " + two(SECTORS.length);
+    board.setAttribute("aria-label", "Now operating in " + s.word.toLowerCase() + ", through " + s.name);
+  }
+
+  function show(s, animate) {
+    clearTimers();
+    var text = pad(s.word);
+    setCaption(s);
+    cells.forEach(function (cell, k) {
+      var target = text.charAt(k);
+      if (!animate) { cell.textContent = target; return; }
+      if (cell.textContent === target) return;
+      var steps = 4 + k % 4;
+      for (var step = 0; step <= steps; step++) {
+        (function (st) {
+          timers.push(setTimeout(function () {
+            cell.textContent = st === steps ? target : GLYPHS.charAt(Math.floor(Math.random() * GLYPHS.length));
+            cell.classList.remove("tick");
+            void cell.offsetWidth;
+            cell.classList.add("tick");
+          }, k * 28 + st * 62));
+        })(step);
+      }
+    });
+  }
+
+  show(SECTORS[0], false);
+  var rotation = null;
+  function advance() {
+    if (document.hidden) return;
+    index = (index + 1) % SECTORS.length;
+    show(SECTORS[index], !reduceMotion);
+  }
+  function start() { if (!rotation) rotation = setInterval(advance, 3400); }
+  function stop() { clearInterval(rotation); rotation = null; }
+  start();
+  board.parentElement.addEventListener("mouseenter", stop);
+  board.parentElement.addEventListener("mouseleave", start);
+
+  boardLink.addEventListener("click", function () {
+    var row = document.getElementById(SECTORS[index].target);
+    if (!row) return;
+    document.querySelectorAll(".row.is-current").forEach(function (r) { r.classList.remove("is-current"); });
+    row.classList.add("is-current");
+    setTimeout(function () { row.classList.remove("is-current"); }, 2400);
+  });
+
+  /* Contact card */
+  function vcard() {
+    return [
+      "BEGIN:VCARD",
+      "VERSION:3.0",
+      "N:" + CONTACT.last + ";" + CONTACT.first + ";" + CONTACT.middle + ";;",
+      "FN:" + CONTACT.first + " " + CONTACT.middle + " " + CONTACT.last,
+      "ORG:" + CONTACT.org,
+      "TITLE:" + CONTACT.title,
+      "TEL;TYPE=CELL,VOICE:" + CONTACT.phone,
+      "EMAIL;TYPE=INTERNET,WORK:" + CONTACT.email,
+      "URL:" + CONTACT.url,
+      "X-SOCIALPROFILE;TYPE=instagram:" + CONTACT.instagram,
+      "X-SOCIALPROFILE;TYPE=linkedin:" + CONTACT.linkedin,
+      "END:VCARD"
+    ].join("\r\n");
+  }
+
+  var qrBox = document.getElementById("qr");
+  if (typeof window.qrcode === "function") {
+    var qr = window.qrcode(0, "M");
+    qr.addData(vcard());
+    qr.make();
+    var n = qr.getModuleCount();
+    var path = "";
+    for (var r = 0; r < n; r++) {
+      for (var col = 0; col < n; col++) {
+        if (qr.isDark(r, col)) path += "M" + col + " " + r + "h1v1h-1z";
+      }
+    }
+    qrBox.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ' + n + " " + n + '" shape-rendering="crispEdges"><rect width="' + n + '" height="' + n + '" fill="#FFFFFF"/><path d="' + path + '" fill="#0D1220"/></svg>';
+  } else {
+    qrBox.hidden = true;
+  }
+
+  /* Copy buttons */
+  document.querySelectorAll("[data-copy]").forEach(function (btn) {
+    var original = btn.textContent;
+    btn.addEventListener("click", function () {
+      var value = btn.getAttribute("data-copy");
+      function done(label) {
+        btn.textContent = label;
+        setTimeout(function () { btn.textContent = original; }, 1800);
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(value).then(function () { done("Copied"); }, function () { done(value); });
+      } else {
+        done(value);
+      }
+    });
+  });
+
+  /* Update topics */
+  var all = document.getElementById("t-all");
+  var topicBoxes = Array.prototype.slice.call(document.querySelectorAll(".chips input[type=checkbox]"));
+  var topicsField = document.getElementById("topics");
+  function syncTopics() {
+    var picked = topicBoxes.filter(function (b) { return b.checked; }).map(function (b) { return b.value; });
+    topicsField.value = picked.length ? picked.join(", ") : "Everything";
+  }
+  topicBoxes.forEach(function (box) {
+    box.addEventListener("change", function () {
+      if (box === all && all.checked) {
+        topicBoxes.forEach(function (b) { if (b !== all) b.checked = false; });
+      } else if (box !== all && box.checked) {
+        all.checked = false;
+      }
+      if (!topicBoxes.some(function (b) { return b.checked; })) all.checked = true;
+      syncTopics();
+    });
+  });
+
+  /* Updates signup */
+  var form = document.getElementById("updates");
+  var note = document.getElementById("formNote");
+  var emailInput = document.getElementById("email");
+  var submitBtn = document.getElementById("notifyBtn");
+  var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+  function say(text, kind) {
+    note.textContent = text;
+    note.className = "form-note" + (kind ? " " + kind : "");
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var email = emailInput.value.trim();
+    if (!EMAIL_RE.test(email)) {
+      say("Enter a full email address, like name@company.com.", "err");
+      emailInput.focus();
+      return;
+    }
+    syncTopics();
+    submitBtn.disabled = true;
+    say("Adding you…");
+    var body = new URLSearchParams(new FormData(form)).toString();
+    fetch("/", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: body })
+      .then(function (res) {
+        if (!res.ok) throw new Error(String(res.status));
+        form.reset();
+        all.checked = true;
+        syncTopics();
+        say("You're on the list. Watch for a note from " + CONTACT.email + ".", "ok");
+      })
+      .catch(function () {
+        say("That didn't go through. Try again in a moment, or email " + CONTACT.email + " and I'll add you.", "err");
+      })
+      .then(function () { submitBtn.disabled = false; });
+  });
+})();
+</script>
