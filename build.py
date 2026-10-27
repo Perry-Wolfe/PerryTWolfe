@@ -24,13 +24,13 @@ VCARD = "\r\n".join([
     "N:Wolfe;Perry;T.;;",
     "FN:Perry T. Wolfe",
     "ORG:Wolfe Worldwide",
-    "TITLE:Business Operations\\, AI Product Development\\, Consulting",
+    "TITLE:Product Strategy\\, Business Operations\\, Leadership",
     "TEL;TYPE=CELL,VOICE:+1-915-820-1384",
     "EMAIL;TYPE=INTERNET,WORK:perry@wolfeworldwide.com",
     "URL:https://perrytwolfe.com",
     "X-SOCIALPROFILE;TYPE=instagram:" + INSTAGRAM,
     "X-SOCIALPROFILE;TYPE=linkedin:" + LINKEDIN,
-    "NOTE:Founder of Car Capitol and RunTorque. Business operations\\, AI product development and consulting.",
+    "NOTE:Built Car Capitol. Sold a dealer-lender software platform to NUBA in 2016. Product development behind RunTorque since 2018.",
     "END:VCARD",
 ]) + "\r\n"
 
