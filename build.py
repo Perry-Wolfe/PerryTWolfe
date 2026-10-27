@@ -24,13 +24,13 @@ VCARD = "\r\n".join([
     "N:Wolfe;Perry;T.;;",
     "FN:Perry T. Wolfe",
     "ORG:Wolfe Worldwide",
-    "TITLE:Founder & CEO",
+    "TITLE:Business Operations\\, AI Product Development\\, Consulting",
     "TEL;TYPE=CELL,VOICE:+1-915-820-1384",
     "EMAIL;TYPE=INTERNET,WORK:perry@wolfeworldwide.com",
     "URL:https://perrytwolfe.com",
     "X-SOCIALPROFILE;TYPE=instagram:" + INSTAGRAM,
     "X-SOCIALPROFILE;TYPE=linkedin:" + LINKEDIN,
-    "NOTE:Founder & CEO of RunTorque\\, Needset AI and SXRX Health.",
+    "NOTE:Founder of Car Capitol and RunTorque. Business operations\\, AI product development and consulting.",
     "END:VCARD",
 ]) + "\r\n"
 
