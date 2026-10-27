@@ -1,4 +1,5 @@
 """Build the deployable site/ folder from src/page.html."""
+import shutil
 from pathlib import Path
 
 ROOT = Path(__file__).parent
@@ -90,6 +91,8 @@ NETLIFY_TOML = """[build]
 
 def main() -> None:
     OUT.mkdir(exist_ok=True)
+    for asset in (ROOT / "src" / "assets").glob("*"):
+        shutil.copyfile(asset, OUT / asset.name)
     (OUT / "index.html").write_text(build_index())
     (OUT / "perry-wolfe.vcf").write_bytes(VCARD.encode("utf-8"))
     (OUT / "_headers").write_text(HEADERS)
